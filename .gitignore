@@ -1,0 +1,29 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# Data
+# We ignore raw/processed datasets as they can be generated or fetched via scripts
+data/raw/*.csv
+data/processed/*.csv
+job_market_data.csv
+
+# Models
+models/*.joblib
