@@ -23,7 +23,9 @@ venv.bak/
 # We ignore raw/processed datasets as they can be generated or fetched via scripts
 data/raw/*.csv
 data/processed/*.csv
+!data/processed/jobs_cleaned.csv
 job_market_data.csv
 
 # Models
 models/*.joblib
+!models/salary_predictor.joblib

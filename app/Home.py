@@ -71,7 +71,7 @@ with col1:
     trend['posted_date'] = trend['posted_date'].dt.to_timestamp()
     fig = px.line(trend, x='posted_date', y='Jobs', template='plotly_dark')
     fig.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
 with col2:
     st.subheader("Top Job Roles Demand")
@@ -79,4 +79,4 @@ with col2:
     roles.columns = ['Role', 'Jobs']
     fig = px.bar(roles, x='Jobs', y='Role', orientation='h', template='plotly_dark')
     fig.update_layout(yaxis={'categoryorder':'total ascending'}, plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')

@@ -1,9 +1,13 @@
 import pandas as pd
 import numpy as np
 import re
+import os
 
 class CareerLensEngine:
-    def __init__(self, data_path='data/processed/jobs_cleaned.csv'):
+    def __init__(self, data_path=None):
+        if data_path is None:
+            base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            data_path = os.path.join(base_dir, 'data', 'processed', 'jobs_cleaned.csv')
         self.df = pd.read_csv(data_path)
         self._prepare_data()
         

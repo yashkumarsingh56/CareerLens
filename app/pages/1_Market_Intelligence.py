@@ -39,7 +39,7 @@ with tab1:
     
     fig = px.bar(skill_counts, x='Skill', y='Demand', color='Demand', template='plotly_dark')
     fig.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
 with tab2:
     st.subheader("Salary Distribution")
@@ -51,7 +51,7 @@ with tab2:
     fig = px.box(sal_df, x='job_title' if role_filter == 'All' else 'location', y='avg_salary_lakhs', 
                  template='plotly_dark', points="all")
     fig.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
 with tab3:
     st.subheader("Location Opportunities")
@@ -64,4 +64,4 @@ with tab3:
                      color='Avg_Salary', template='plotly_dark')
     fig.update_traces(textposition='top center')
     fig.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
